@@ -6,16 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="NewCustomerServlet" method="post">
-            <input type="text" name="FirstName"><br>
-            <input type="text" name="LastName"><br>
-            <input type="text" name="phone"><br>
-            <input type="text" name="address"><br>
-            <input type="text" name="city"><br>
-            <input type="text" name="state"><br>
-            <input type="text" name="zip"><br>
-            <input type="text" name="email"><br>
-            <input type="submit" value="Sign Up!">
+        <h1>New Customer Signup</h1>
+        <p>Enter your information in the form below and click Sign Up.</p>
+        <form action="newCustomer" method="post">
+            <table>
+                <tr><th>First Name: </th>
+                    <td><input type="text" name="firstName"></td></tr>
+                <tr><th>Last Name: </th>
+                    <td><input type="text" name="lastName"></td></tr>
+                <tr><th>Phone: </th>
+                    <td><input type="text" name="phone"></td></tr>
+                <tr><th>Address: </th>
+                    <td><input type="text" name="address"></td></tr>
+                <tr><th>City: </th>
+                    <td><input type="text" name="city"></td></tr>
+                <tr><th>State: </th>
+                    <td><input type="text" name="state"></td></tr>
+                <tr><th>Zip Code: </th>
+                    <td><input type="text" name="zip"></td></tr>
+                <tr><th>Email: </th>
+                    <td><input type="text" name="email"></td></tr>
+            </table>
+            <input type="submit" value="Sign Up!">  
         </form>
     </body>
 </html>

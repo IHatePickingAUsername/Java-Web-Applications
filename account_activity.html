@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Account Activity</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+        <title>Titan Online Banking Application</title>
+    </head>    
         <h1>Account Activity</h1>
-    </body>
+    <c:if test="${user != null}">
+        <p>Welcome, <c:out value=${user.firstName}" /> <c:out value="${user.lastName}" /></p>
+    </c:if>
+    <c:otherwise><p>You are not logged in.</p></c:otherwise>
+</body>
 </html>
