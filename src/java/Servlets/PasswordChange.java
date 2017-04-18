@@ -31,7 +31,7 @@ public class PasswordChange extends HttpServlet {
         User user = (User) session.getAttribute("user");
         String newPassword = request.getParameter("newPassword");
         user.setPassword(newPassword);
-        String url = "/account_activity.html";
+        String url = "/account_activity.jsp";
         getServletContext().getRequestDispatcher(url).forward(request, response);
         
     }

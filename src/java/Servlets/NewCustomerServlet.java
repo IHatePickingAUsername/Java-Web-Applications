@@ -8,6 +8,7 @@ import javax.servlet.http.*;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import data.UserDB;
 
 public class NewCustomerServlet extends HttpServlet {
     
@@ -36,6 +37,7 @@ public class NewCustomerServlet extends HttpServlet {
             request.setAttribute("user", user);
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
+            UserDB.insert(user);
             String url = "/success.jsp";
             getServletContext().getRequestDispatcher(url).forward(request, response);
         } else {

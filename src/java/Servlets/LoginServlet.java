@@ -1,6 +1,7 @@
 package Servlets;
 
 import java.io.*;
+import JavaBeans.User;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +17,7 @@ public class LoginServlet extends HttpServlet{
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if ("jsmith@toba.com".equals(username) && "letmein".equals(password)) {
-            String url = "/account_activity.html";
-            request.getSession().setAttribute("firstName", "John");
-            request.getSession().setAttribute("lastName", "Smith");
+            String url = "/account_activity.jsp";
             getServletContext().getRequestDispatcher(url).forward(request, response);
         } else {
             String url = "/login_failure.html";
